@@ -1,9 +1,22 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import BycategoryPage from "./pages/BycategoryPage";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hi i am Milon roy</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage></HomePage>}></Route>
+        <Route
+          path="/category/:categoryId"
+          element={<BycategoryPage></BycategoryPage>}
+        ></Route>
+        <Route
+          path="/details/:detailsId"
+          element={<BycategoryPage></BycategoryPage>}
+        ></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
