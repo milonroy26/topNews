@@ -20,3 +20,13 @@ export async function postNewest() {
     return [];
   }
 }
+
+// post by category
+export async function postByCategory(id) {
+  let res = await axios(BaseURl + "/post-list/" + id);
+  if (res.status === 200) {
+    return res.data;
+  } else {
+    return [];
+  }
+}
